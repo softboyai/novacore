@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images/uploads"
+publish_mode: editorial_workflow
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "content/site.json"
+        label: "Homepage Content"
+        name: "homepage"
+        fields:
+          - { label: "Hero Title", name: "hero.title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero.subtitle", widget: "text" }
+          - { label: "CTA Text", name: "hero.ctaText", widget: "string" }
+          - { label: "CTA Link", name: "hero.ctaHref", widget: "string", default: "#register" }
+      - file: "content/testimonials.json"
+        label: "Testimonials"
+        name: "testimonials"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Photo (optional)", name: "photo", widget: "image", required: false }
+              - { label: "Video (optional)", name: "video", widget: "file", required: false }
+      - file: "content/partners.json"
+        label: "Partners"
+        name: "partners"
+        fields:
+          - label: "Partners"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Link (optional)", name: "link", widget: "string", required: false }
+      - file: "content/sponsors.json"
+        label: "Sponsors"
+        name: "sponsors"
+        fields:
+          - label: "Sponsors"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Link (optional)", name: "link", widget: "string", required: false }

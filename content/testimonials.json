@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "name": "Feris Nelwiss",
+      "role": "Student, UTB",
+      "quote": "Learning by building real projects helped me connect the dots fast.",
+      "video": "videos/feri.mp4"
+    },
+    {
+      "name": "MBoumba Sherloga",
+      "role": "Student, UTB",
+      "quote": "Mentorship and feedback accelerated my growth.",
+      "video": "videos/NOVACORE STUDENT.mov"
+    }
+  ]
+}

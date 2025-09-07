@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Mount Kigali University",
+      "logo": "images/mku.jpg",
+      "link": "#"
+    },
+    {
+      "name": "UTB",
+      "logo": "images/utb.png",
+      "link": "#"
+    },
+    {
+      "name": "Harambee Rwanda",
+      "logo": "images/Harambee-logo.png",
+      "link": "#"
+    }
+  ]
+}
