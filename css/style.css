@@ -133,11 +133,16 @@ nav a:hover::after {
 /* Mobile Navigation */
 #mobile-nav {
   backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.98);
+  /* Let Tailwind classes in markup control the background (supports dark mode gradients) */
+  background: transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Ensure mobile nav link text stays readable across themes */
+#mobile-nav a { color: #ffffff; }
+html.dark #mobile-nav a { color: #ffffff; }
 
 #mobile-nav::-webkit-scrollbar {
   display: none;

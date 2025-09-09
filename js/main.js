@@ -103,6 +103,17 @@ if (scrollTopBtn) {
   // Add click handler if toggle exists
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
+    // Set correct icon state on load
+    (function syncIcons() {
+      const isDark = root.classList.contains('dark');
+      const sun = toggle.querySelector('[data-icon="sun"]');
+      const moon = toggle.querySelector('[data-icon="moon"]');
+      if (sun && moon) {
+        if (isDark) { sun.classList.add('hidden'); moon.classList.remove('hidden'); }
+        else { sun.classList.remove('hidden'); moon.classList.add('hidden'); }
+      }
+    })();
+
     toggle.addEventListener('click', () => {
       const isDark = root.classList.toggle('dark');
       localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light');
