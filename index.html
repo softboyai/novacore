@@ -45,6 +45,11 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script>
+    // Enable class-based dark mode for Tailwind so the 'dark' class works
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = { darkMode: 'class' };
+  </script>
   <link href="/css/style.css" rel="stylesheet">
   <!-- Netlify Identity widget for CMS login -->
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -97,31 +102,31 @@
     ]
   }</script>
 </head>
-<body class="bg-blue-50">
+<body class="bg-blue-50 dark:bg-slate-900">
   <!-- Sticky Navigation Bar -->
-  <header class="shadow-sm sticky top-0 z-50">
+  <header class="shadow-sm sticky top-0 z-50 bg-white dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
       <a href="#home" class="flex items-center gap-3">
         <img src="images/novacore.png" alt="NovaCore Hub Logo" class="h-10 w-10 rounded-full object-cover" loading="eager" decoding="async">
-        <span class="text-xl font-bold text-gray-900">NovaCore Hub</span>
+        <span class="text-xl font-bold text-gray-900 dark:text-gray-100">NovaCore Hub</span>
       </a>
       <nav class="hidden md:flex gap-6 text-sm font-semibold">
-        <a href="#home" class="hover:text-blue-600 text-gray-800 transition">Home</a>
-        <a href="#about" class="hover:text-blue-600 text-gray-800 transition">About</a>
-        <a href="#programs" class="hover:text-blue-600 text-gray-800 transition">Programs</a>
-        <a href="#how-it-works" class="hover:text-blue-600 text-gray-800 transition">How It Works</a>
-        <a href="#business-services" class="hover:text-blue-600 text-gray-800 transition">Business</a>
-        <a href="#testimonials" class="hover:text-blue-600 text-gray-800 transition">Testimonials</a>
-        <a href="#sponsor-us" class="hover:text-blue-600 text-gray-800 transition">Sponsor</a>
-        <a href="#contact" class="hover:text-blue-600 text-gray-800 transition">Contact</a>
-        <a href="#register" class="hover:text-blue-700 text-blue-700 transition">Register</a>
+        <a href="#home" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Home</a>
+        <a href="#about" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">About</a>
+        <a href="#programs" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Programs</a>
+        <a href="#how-it-works" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">How It Works</a>
+        <a href="#business-services" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Business</a>
+        <a href="#testimonials" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Testimonials</a>
+        <a href="#sponsor-us" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Sponsor</a>
+        <a href="#contact" class="hover:text-blue-600 text-gray-800 dark:text-gray-200 dark:hover:text-blue-300 transition">Contact</a>
+        <a href="#register" class="hover:text-blue-700 text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition">Register</a>
       </nav>
-      <button id="theme-toggle" class="ml-4 inline-flex items-center justify-center rounded-full border border-gray-200 text-gray-700 hover:bg-gray-50 h-9 w-9 md:h-10 md:w-10" aria-label="Toggle dark mode">
+      <button id="theme-toggle" class="ml-4 inline-flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 h-9 w-9 md:h-10 md:w-10" aria-label="Toggle dark mode">
         <svg data-icon="sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.364 6.364l-1.414-1.414M8.05 8.05L6.636 6.636m10.728 0l-1.414 1.414M8.05 15.95l-1.414 1.414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <svg data-icon="moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <!-- Mobile Hamburger -->
-      <button id="nav-toggle" class="md:hidden text-blue-700 focus:outline-none" aria-label="Open navigation">
+      <button id="nav-toggle" class="md:hidden text-blue-700 dark:text-blue-300 focus:outline-none" aria-label="Open navigation">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
     </div>
@@ -261,27 +266,27 @@
     </div>
   </section>
   <!-- About Section -->
-  <section id="about" class="py-20 bg-gradient-to-b from-white via-blue-50 to-gray-50">
-    <div id="about-animate" class="max-w-3xl mx-auto px-4 rounded-2xl shadow-lg bg-white/90 backdrop-blur-md p-8 md:p-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-3">About NovaCore Hub</h2>
-      <h3 class="text-lg md:text-2xl font-semibold text-blue-600 mb-6">Built for the Future of Africa — Starting in Rwanda</h3>
-      <p class="text-gray-700 text-base md:text-lg mb-8">NovaCore Hub is where students gain digital experience and businesses get real results. We connect the young generation to modern work environments through internships, tech training, and soft skills. At the same time, we deliver affordable and high-impact digital services to businesses that want to grow, close more sales, and stay competitive.</p>
+  <section id="about" class="py-20 bg-gradient-to-b from-white via-blue-50 to-gray-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+    <div id="about-animate" class="max-w-3xl mx-auto px-4 rounded-2xl shadow-lg bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-8 md:p-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 dark:text-blue-300 mb-3">About NovaCore Hub</h2>
+      <h3 class="text-lg md:text-2xl font-semibold text-blue-600 dark:text-blue-200 mb-6">Built for the Future of Africa — Starting in Rwanda</h3>
+      <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-8">NovaCore Hub is where students gain digital experience and businesses get real results. We connect the young generation to modern work environments through internships, tech training, and soft skills. At the same time, we deliver affordable and high-impact digital services to businesses that want to grow, close more sales, and stay competitive.</p>
       <ul class="text-left mb-8 space-y-3 w-full max-w-md mx-auto">
         <li class="flex items-start gap-3">
           <span class="mt-1 text-blue-500">&#10003;</span>
-          <span class="text-gray-800 font-medium">Hands-on student training programs</span>
+          <span class="text-gray-800 dark:text-gray-200 font-medium">Hands-on student training programs</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="mt-1 text-blue-500">&#10003;</span>
-          <span class="text-gray-800 font-medium">Real-world business service delivery</span>
+          <span class="text-gray-800 dark:text-gray-200 font-medium">Real-world business service delivery</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="mt-1 text-blue-500">&#10003;</span>
-          <span class="text-gray-800 font-medium">Focused on ROI and client satisfaction</span>
+          <span class="text-gray-800 dark:text-gray-200 font-medium">Focused on ROI and client satisfaction</span>
         </li>
         <li class="flex items-start gap-3">
           <span class="mt-1 text-blue-500">&#10003;</span>
-          <span class="text-gray-800 font-medium">Rwanda-first, Africa-next vision</span>
+          <span class="text-gray-800 dark:text-gray-200 font-medium">Rwanda-first, Africa-next vision</span>
         </li>
       </ul>
     </div>
