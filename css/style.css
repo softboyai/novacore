@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 50%, var(--primary-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -150,13 +150,13 @@ html.dark #mobile-nav a { color: #ffffff; }
 
 /* Hero Section */
 #home {
-  background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25) 0%, rgba(59, 130, 246, 0.25) 100%);
   position: relative;
   overflow: hidden;
 }
 
 html.dark #home {
-  background: linear-gradient(135deg, #0b1324 0%, #0f1b32 100%);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(30, 64, 175, 0.6) 100%);
 }
 
 /* Ensure hero image crops nicely on all screens */
