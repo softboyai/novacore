@@ -316,6 +316,17 @@ html.dark .bg-gray-50.shadow {
   background: rgba(15, 23, 42, 0.9) !important;
   border: 1px solid rgba(148, 163, 184, 0.15) !important;
 }
+
+/* Dark mode support for Meet Our Team section */
+html.dark #meet-our-team h2,
+html.dark #meet-our-team h3 { color: #e5e7eb !important; }
+html.dark #meet-our-team p { color: #cbd5e1 !important; }
+html.dark #meet-our-team .bg-gradient-to-r.from-blue-50.to-indigo-50 {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)) !important;
+  border: 1px solid rgba(148, 163, 184, 0.15) !important;
+}
+html.dark #meet-our-team .bg-gradient-to-r.from-blue-50.to-indigo-50 h3,
+html.dark #meet-our-team .bg-gradient-to-r.from-blue-50.to-indigo-50 p { color: #e2e8f0 !important; }
 html.dark .bg-gray-50.rounded-xl h1,
 html.dark .bg-gray-50.rounded-xl h2,
 html.dark .bg-gray-50.rounded-xl h3,
