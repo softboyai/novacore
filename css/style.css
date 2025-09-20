@@ -274,37 +274,121 @@ html.dark .card {
   background: var(--white);
   border-color: var(--gray-300);
 }
-html.dark .card h3 { color: #e5e7eb !important; }
-html.dark .card p { color: #cbd5e1 !important; }
+/* Card text styling for better readability */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  color: var(--navy-blue) !important;
+}
+
+.card p,
+.card li,
+.card span {
+  color: var(--dark-gray) !important;
+}
+
+.card .text-gray-500,
+.card .text-gray-600,
+.card .text-gray-700 {
+  color: var(--dark-gray) !important;
+}
+
+.card a {
+  color: var(--cyan-blue) !important;
+}
+
+.card a:hover {
+  color: var(--navy-blue) !important;
+}
+
+/* Dark mode card text */
 html.dark .card h1,
 html.dark .card h2,
+html.dark .card h3,
 html.dark .card h4,
 html.dark .card h5,
-html.dark .card h6,
-html.dark .card li,
-html.dark .card span { color: #e5e7eb !important; }
-html.dark .card .text-gray-500 { color: #a8b3c7 !important; }
-html.dark .card a { color: #93c5fd !important; }
-html.dark .card a:hover { color: #bfdbfe !important; }
-
-/* Dark mode overrides for Tailwind-like cards that don't use .card */
-html.dark .bg-white.rounded-xl.shadow-md {
-  background: rgba(15, 23, 42, 0.9) !important;
-  border: 1px solid rgba(148, 163, 184, 0.15) !important;
+html.dark .card h6 {
+  color: var(--navy-blue) !important;
 }
+
+html.dark .card p,
+html.dark .card li,
+html.dark .card span {
+  color: var(--dark-gray) !important;
+}
+
+html.dark .card .text-gray-500,
+html.dark .card .text-gray-600,
+html.dark .card .text-gray-700 {
+  color: var(--dark-gray) !important;
+}
+
+html.dark .card a {
+  color: var(--cyan-blue) !important;
+}
+
+html.dark .card a:hover {
+  color: var(--navy-blue) !important;
+}
+
+/* Tailwind-like cards styling for better readability */
+.bg-white.rounded-xl.shadow-md {
+  background: var(--white) !important;
+  border: 1px solid var(--gray-200) !important;
+}
+
+.bg-white.rounded-xl.shadow-md h1,
+.bg-white.rounded-xl.shadow-md h2,
+.bg-white.rounded-xl.shadow-md h3,
+.bg-white.rounded-xl.shadow-md h4,
+.bg-white.rounded-xl.shadow-md h5,
+.bg-white.rounded-xl.shadow-md h6 {
+  color: var(--navy-blue) !important;
+}
+
+.bg-white.rounded-xl.shadow-md p,
+.bg-white.rounded-xl.shadow-md li,
+.bg-white.rounded-xl.shadow-md span,
+.bg-white.rounded-xl.shadow-md div {
+  color: var(--dark-gray) !important;
+}
+
+.bg-white.rounded-xl.shadow-md .text-gray-700,
+.bg-white.rounded-xl.shadow-md .text-gray-600,
+.bg-white.rounded-xl.shadow-md .text-gray-500 {
+  color: var(--dark-gray) !important;
+}
+
+/* Dark mode overrides for Tailwind-like cards */
+html.dark .bg-white.rounded-xl.shadow-md {
+  background: var(--white) !important;
+  border: 1px solid var(--gray-300) !important;
+}
+
 html.dark .bg-white.rounded-xl.shadow-md h1,
 html.dark .bg-white.rounded-xl.shadow-md h2,
 html.dark .bg-white.rounded-xl.shadow-md h3,
 html.dark .bg-white.rounded-xl.shadow-md h4,
 html.dark .bg-white.rounded-xl.shadow-md h5,
-html.dark .bg-white.rounded-xl.shadow-md h6 { color: #f1f5f9 !important; }
+html.dark .bg-white.rounded-xl.shadow-md h6 {
+  color: var(--navy-blue) !important;
+}
+
 html.dark .bg-white.rounded-xl.shadow-md p,
 html.dark .bg-white.rounded-xl.shadow-md li,
 html.dark .bg-white.rounded-xl.shadow-md span,
-html.dark .bg-white.rounded-xl.shadow-md div { color: #e2e8f0; }
-html.dark .bg-white.rounded-xl.shadow-md .text-gray-700 { color: #cbd5e1 !important; }
-html.dark .bg-white.rounded-xl.shadow-md .text-gray-600 { color: #a8b3c7 !important; }
-html.dark .bg-white.rounded-xl.shadow-md .text-gray-500 { color: #94a3b8 !important; }
+html.dark .bg-white.rounded-xl.shadow-md div {
+  color: var(--dark-gray) !important;
+}
+
+html.dark .bg-white.rounded-xl.shadow-md .text-gray-700,
+html.dark .bg-white.rounded-xl.shadow-md .text-gray-600,
+html.dark .bg-white.rounded-xl.shadow-md .text-gray-500 {
+  color: var(--dark-gray) !important;
+}
 
 /* Programs cards hover keep contrast */
 html.dark .bg-white.rounded-xl.shadow-md:hover {
@@ -312,14 +396,48 @@ html.dark .bg-white.rounded-xl.shadow-md:hover {
   box-shadow: var(--shadow-2xl);
 }
 
-/* Dark mode overrides for gray cards/blocks (e.g., consultation, feature blocks) */
+/* Gray background cards styling for better readability */
+.bg-gray-50.rounded-xl,
+.bg-gray-50.rounded-2xl,
+.bg-gray-50.rounded-md,
+.bg-gray-50.shadow-md,
+.bg-gray-50.shadow {
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
+}
+
+.bg-gray-50.rounded-xl h1,
+.bg-gray-50.rounded-xl h2,
+.bg-gray-50.rounded-xl h3,
+.bg-gray-50.rounded-xl h4,
+.bg-gray-50.rounded-xl h5,
+.bg-gray-50.rounded-xl h6,
+.bg-gray-50.rounded-2xl h1,
+.bg-gray-50.rounded-2xl h2,
+.bg-gray-50.rounded-2xl h3,
+.bg-gray-50.rounded-2xl h4,
+.bg-gray-50.rounded-2xl h5,
+.bg-gray-50.rounded-2xl h6 {
+  color: var(--navy-blue) !important;
+}
+
+.bg-gray-50.rounded-xl p,
+.bg-gray-50.rounded-xl li,
+.bg-gray-50.rounded-xl span,
+.bg-gray-50.rounded-2xl p,
+.bg-gray-50.rounded-2xl li,
+.bg-gray-50.rounded-2xl span {
+  color: var(--dark-gray) !important;
+}
+
+/* Dark mode overrides for gray cards/blocks */
 html.dark .bg-gray-50.rounded-xl,
 html.dark .bg-gray-50.rounded-2xl,
 html.dark .bg-gray-50.rounded-md,
 html.dark .bg-gray-50.shadow-md,
 html.dark .bg-gray-50.shadow {
-  background: rgba(15, 23, 42, 0.9) !important;
-  border: 1px solid rgba(148, 163, 184, 0.15) !important;
+  background: var(--gray-50) !important;
+  border: 1px solid var(--gray-200) !important;
 }
 
 /* Dark mode support for Meet Our Team section */
