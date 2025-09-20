@@ -42,6 +42,7 @@
   }</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
@@ -103,7 +104,7 @@
     ]
   }</script>
 </head>
-<body class="bg-blue-50 dark:bg-slate-900">
+<body class="bg-white dark:bg-slate-900" style="font-family: 'Poppins', sans-serif;">
   <!-- Sticky Navigation Bar -->
   <header class="shadow-sm sticky top-0 z-50 bg-white dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
@@ -152,12 +153,12 @@
     </div>
   </header>
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-blue-100 via-blue-50 to-white">
+  <section id="home" class="relative min-h-screen flex items-center justify-center text-center" style="background: #0A2A66;">
     <img src="images/bgweb.png" alt="Background" class="hero-bg absolute inset-0 w-full h-full object-cover opacity-60 -z-10" loading="eager" decoding="async" fetchpriority="high" sizes="100vw">
-    <div class="absolute inset-0 bg-blue-900 bg-opacity-40 -z-10"></div>
+    <div class="absolute inset-0" style="background: rgba(0, 180, 241, 0.1); -z-index: 10;"></div>
     <div class="z-10 px-4">
       <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">Learn. Build. Grow.</h1>
-      <p id="hero-subtitle" class="text-lg md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">At NovaCore Hub, students gain job-ready digital skills by working on real projects. Businesses benefit with practical results.</p>
+      <p id="hero-subtitle" class="text-lg md:text-2xl text-white mb-8 max-w-2xl mx-auto">At NovaCore Hub, students gain job-ready digital skills by working on real projects. Businesses benefit with practical results.</p>
       <a id="register-cta" href="#register" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 text-lg cta-animate">Get Started</a>
     </div>
   </section>

@@ -1,26 +1,34 @@
 @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Root Variables */
+/* Root Variables - NovaCore Branding */
 :root {
-  --primary-color: #2563eb; /* NovaCore blue from logo */
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary-color: #000000; /* black */
-  --accent-color: #ffffff; /* white */
+  --navy-blue: #0A2A66; /* Dark Navy Blue - primary background, headings */
+  --cyan-blue: #00B4F1; /* Bright Cyan Blue - accent, buttons, links */
+  --dark-gray: #1C1C1C; /* Dark Gray - body text on light sections */
+  --white: #FFFFFF; /* White - contrast sections, text on dark */
+  
+  /* Legacy variables for compatibility */
+  --primary-color: #0A2A66;
+  --primary-dark: #08214d;
+  --primary-light: #00B4F1;
+  --secondary-color: #1C1C1C;
+  --accent-color: #00B4F1;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --success-color: #10b981;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  
+  /* Updated gray scale for better contrast */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -35,14 +43,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: var(--gray-800);
-  background: linear-gradient(180deg, #f8fbff 0%, #eef2ff 100%);
+  color: var(--dark-gray);
+  background: var(--white);
   min-height: 100vh;
 }
 
@@ -78,7 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
-  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 50%, var(--primary-dark) 100%);
+  color: var(--navy-blue);
+  background: linear-gradient(135deg, var(--cyan-blue) 0%, var(--navy-blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,27 +96,29 @@ h1 {
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
+  color: var(--navy-blue);
 }
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
+  color: var(--navy-blue);
 }
 
 /* Navigation Enhancements */
 header {
   backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
   box-shadow: var(--shadow-lg);
 }
 
 html.dark header {
-  background: rgba(15, 23, 42, 0.85);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  background: var(--navy-blue);
+  border-bottom: 1px solid var(--cyan-blue);
 }
-html.dark header nav a { color: #e5e7eb; }
-html.dark header nav a:hover { color: #93c5fd; }
+html.dark header nav a { color: var(--white); }
+html.dark header nav a:hover { color: var(--cyan-blue); }
 
 nav a {
   position: relative;
@@ -122,7 +133,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: var(--cyan-blue);
   transition: width 0.3s ease;
 }
 
@@ -150,13 +161,13 @@ html.dark #mobile-nav a { color: #ffffff; }
 
 /* Hero Section */
 #home {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25) 0%, rgba(59, 130, 246, 0.25) 100%);
+  background: var(--navy-blue);
   position: relative;
   overflow: hidden;
 }
 
 html.dark #home {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(30, 64, 175, 0.6) 100%);
+  background: var(--navy-blue);
 }
 
 /* Ensure hero image crops nicely on all screens */
@@ -175,8 +186,8 @@ html.dark #home {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 30% 20%, rgba(0, 180, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(0, 180, 241, 0.05) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -193,34 +204,29 @@ section {
 }
 
 section:nth-child(even) {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  background: var(--white);
 }
 
 section:nth-child(odd) {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: var(--gray-50);
 }
 
 html.dark section:nth-child(even),
 html.dark section:nth-child(odd) {
-  background: rgba(2, 6, 23, 0.55);
+  background: var(--navy-blue);
 }
 
 /* Force readable text inside sections when dark */
 html.dark section h1,
 html.dark section h2,
 html.dark section h3,
-html.dark section h4,
-html.dark section p,
-html.dark section li,
-html.dark section span {
-  color: rgba(241, 245, 249, 0.96);
+html.dark section h4 {
+  color: var(--white) !important;
 }
 html.dark section p,
 html.dark section li,
 html.dark section span {
-  color: rgba(226, 232, 240, 0.9);
+  color: var(--white) !important;
 }
 
 /* Dark mode text overrides for common utility classes in markup */
@@ -254,10 +260,9 @@ html.dark #business-services img[alt="Business Services"] {
 
 /* Card Enhancements */
 .card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
   padding: 2rem;
   box-shadow: var(--shadow-xl);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -266,8 +271,8 @@ html.dark #business-services img[alt="Business Services"] {
 }
 
 html.dark .card {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: rgba(148, 163, 184, 0.12);
+  background: var(--white);
+  border-color: var(--gray-300);
 }
 html.dark .card h3 { color: #e5e7eb !important; }
 html.dark .card p { color: #cbd5e1 !important; }
@@ -372,7 +377,7 @@ html.dark .bg-gradient-to-r.from-blue-100.via-white.to-green-100 div { color: #e
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(90deg, var(--navy-blue), var(--cyan-blue));
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -384,7 +389,7 @@ html.dark .bg-gradient-to-r.from-blue-100.via-white.to-green-100 div { color: #e
 .card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-2xl);
-  border-color: rgba(37, 99, 235, 0.3);
+  border-color: var(--cyan-blue);
 }
 
 /* Button Enhancements */
@@ -428,42 +433,61 @@ button:active, .btn:active {
   transform: translateY(0);
 }
 
-/* Primary Button - unify CTAs to brand blue */
+/* Primary Button - Navy background with White text */
 .bg-blue-600, .bg-blue-700, .btn-primary {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: var(--navy-blue);
+  color: var(--white);
   box-shadow: var(--shadow-md);
+  border: 2px solid var(--navy-blue);
 }
 
 .bg-blue-600:hover, .bg-blue-700:hover, .btn-primary:hover {
-  background: linear-gradient(135deg, var(--primary-dark), #1e40af);
+  background: var(--cyan-blue);
+  color: var(--navy-blue);
+  border-color: var(--cyan-blue);
   box-shadow: var(--shadow-lg);
+}
+
+/* Secondary Button - Cyan background with White text */
+.btn-secondary {
+  background: var(--cyan-blue);
+  color: var(--white);
+  border: 2px solid var(--cyan-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--navy-blue);
+  border-color: var(--white);
 }
 
 /* Dark mode button variants */
 html.dark .bg-blue-600, html.dark .bg-blue-700 {
-  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  background: var(--navy-blue);
+  color: var(--white);
 }
 
 html.dark .bg-blue-600:hover, html.dark .bg-blue-700:hover {
-  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  background: var(--cyan-blue);
+  color: var(--navy-blue);
 }
 
 /* Form Enhancements */
 input, textarea, select {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.75rem;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
   padding: 0.875rem 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   outline: none;
+  color: var(--dark-gray);
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--cyan-blue);
+  box-shadow: 0 0 0 4px rgba(0, 180, 241, 0.1);
+  background: var(--white);
   transform: translateY(-1px);
 }
 
@@ -474,25 +498,25 @@ input::placeholder, textarea::placeholder {
 
 /* Dark mode inputs */
 html.dark input, html.dark textarea, html.dark select {
-  background: rgba(15, 23, 42, 0.8);
-  border-color: rgba(148, 163, 184, 0.2);
-  color: #e2e8f0;
+  background: var(--white);
+  border-color: var(--gray-300);
+  color: var(--dark-gray);
 }
 html.dark input:focus, html.dark textarea:focus, html.dark select:focus {
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2);
-  background: rgba(15, 23, 42, 0.9);
+  border-color: var(--cyan-blue);
+  box-shadow: 0 0 0 4px rgba(0, 180, 241, 0.2);
+  background: var(--white);
 }
 html.dark input::placeholder, html.dark textarea::placeholder {
-  color: #94a3b8;
+  color: var(--gray-500);
 }
-html.dark label { color: #e5e7eb; }
+html.dark label { color: var(--white); }
 
 /* Checkbox and Radio Styling */
 input[type="checkbox"], input[type="radio"] {
   width: 1.25rem;
   height: 1.25rem;
-  accent-color: var(--primary-color);
+  accent-color: var(--cyan-blue);
   cursor: pointer;
 }
 
@@ -592,7 +616,8 @@ input[type="checkbox"], input[type="radio"] {
 
 /* Scroll to Top Button */
 #scrollTopBtn {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, var(--navy-blue), var(--cyan-blue));
+  color: var(--white);
   box-shadow: var(--shadow-xl);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
@@ -610,22 +635,49 @@ input[type="checkbox"], input[type="radio"] {
   box-shadow: var(--shadow-2xl);
 }
 
+/* Footer styling */
+footer {
+  background: var(--navy-blue) !important;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--cyan-blue);
+}
+
 /* Footer dark mode */
 html.dark footer {
-  background: #0b1220 !important;
+  background: var(--navy-blue) !important;
 }
 
 html.dark footer a {
-  color: #cbd5e1;
+  color: var(--white);
 }
+
+html.dark footer a:hover {
+  color: var(--cyan-blue);
+}
+
+/* Footer CTA card */
+.footer-cta {
+  background: linear-gradient(90deg, var(--cyan-blue), var(--navy-blue)) !important;
+  border: 1px solid var(--cyan-blue);
+}
+
+.footer-cta h3 { color: var(--white); }
+.footer-cta p { color: var(--white); }
 
 /* Dark variant for footer CTA card */
 html.dark .footer-cta {
-  background: linear-gradient(90deg, #065f46, #064e3b) !important;
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: linear-gradient(90deg, var(--cyan-blue), var(--navy-blue)) !important;
+  border: 1px solid var(--cyan-blue);
 }
-html.dark .footer-cta h3 { color: #f0fdf4; }
-html.dark .footer-cta p { color: #dcfce7; }
+html.dark .footer-cta h3 { color: var(--white); }
+html.dark .footer-cta p { color: var(--white); }
 
 /* CTA subtle animation */
 .cta-animate {
