@@ -124,7 +124,7 @@ This project is proprietary to NovaCore Hub.
 ## Contact
 
 For questions or support:
-- Email: novacorehubltd@gmail.com
+ - Email: info@novacorehub.com
 - Location: Sonatube, former UTB, Kigali, Rwanda
 
 ---
