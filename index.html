@@ -163,7 +163,7 @@
     </div>
   </section>
   <!-- Mission & Impact Section -->
-  <section id="mission" class="py-20 bg-white">
+  <section id="mission" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 1000px;">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Mission & Impact</h2>
       <p class="text-lg text-gray-700 max-w-3xl mx-auto">We help young people turn curiosity into capability and connect businesses with practical digital solutions. Our training is hands-on. Our projects are real. Our goal is growth for students, businesses, and the local economy.</p>
@@ -192,14 +192,14 @@
     </div>
   </section>
   <!-- Student Registration CTA -->
-  <section id="register" class="w-full flex justify-center bg-gradient-to-r from-blue-100 via-blue-200 to-blue-50 py-8">
+  <section id="register" class="w-full flex justify-center bg-gradient-to-r from-blue-100 via-blue-200 to-blue-50 py-8" style="content-visibility: auto; contain-intrinsic-size: 200px;">
     <a href="https://forms.gle/LopYJQrq8TvE5LP29" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg md:text-xl transition duration-300 cta-animate">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2zm-6 8v-1a4 4 0 014-4h8a4 4 0 014 4v1" /></svg>
       Register as a Student
     </a>
   </section>
   <!-- Who We Help Section -->
-  <section id="who-we-help" class="py-20 bg-gray-50">
+  <section id="who-we-help" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 800px;">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">Who We Help</h2>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -224,7 +224,7 @@
   </section>
 
   <!-- Students Section -->
-  <section id="students" class="py-20 bg-white">
+  <section id="students" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-5xl mx-auto px-4">
       <div class="max-w-2xl mx-auto text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Students: Build Real Skills</h2>
@@ -243,7 +243,7 @@
   </section>
 
   <!-- Partners Section -->
-  <section id="partners" class="py-20 bg-gray-50">
+  <section id="partners" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 700px;">
     <div class="max-w-5xl mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Partners: Let’s Build Together</h2>
@@ -252,12 +252,16 @@
       <div class="flex justify-center mb-8">
         <picture>
           <source srcset="images/handshake.png" type="image/png">
-          <img src="images/handshake.png" alt="Partnership handshake illustrating collaboration" class="mx-auto h-16 w-auto rounded-2xl shadow max-w-full" loading="lazy" decoding="async">
+          <img src="images/handshake.png" alt="Partnership handshake illustrating collaboration" class="mx-auto h-16 w-auto rounded-2xl shadow max-w-full" loading="lazy" decoding="async" fetchpriority="low">
         </picture>
       </div>
       <div class="grid gap-8 sm:grid-cols-2">
         <div class="card"><h3 class="text-lg font-semibold text-gray-900 mb-2">Co-branded Programs</h3><p class="text-gray-700">Design practical, industry-aligned learning experiences.</p></div>
         <div class="card"><h3 class="text-lg font-semibold text-gray-900 mb-2">Talent Pipelines</h3><p class="text-gray-700">Help students transition into internships and paid projects.</p></div>
+        <!-- Dynamic Partners Logos -->
+        <div class="sm:col-span-2">
+          <div id="partners-logos" class="flex flex-wrap justify-center items-center gap-8"></div>
+        </div>
         <!-- Partner: Harambee Rwanda -->
         <div class="card sm:col-span-2">
           <div class="flex flex-col md:flex-row items-center gap-6 text-left">
@@ -272,7 +276,7 @@
     </div>
   </section>
   <!-- About Section -->
-  <section id="about" class="py-20 bg-gradient-to-b from-white via-blue-50 to-gray-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+  <section id="about" class="py-20 bg-gradient-to-b from-white via-blue-50 to-gray-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div id="about-animate" class="max-w-3xl mx-auto px-4 rounded-2xl shadow-lg bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-8 md:p-12 flex flex-col items-center text-center opacity-0 translate-y-8 transition-all duration-700">
       <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 dark:text-blue-300 mb-3">About NovaCore Hub</h2>
       <h3 class="text-lg md:text-2xl font-semibold text-blue-600 dark:text-blue-200 mb-6">Built for the future of Africa. Starting in Rwanda.</h3>
@@ -298,7 +302,7 @@
     </div>
   </section>
   <!-- Programs Section -->
-  <section id="programs" class="py-20 bg-gray-50">
+  <section id="programs" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">Programs We Offer</h2>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -348,12 +352,12 @@
     </div>
   </section>
   <!-- How It Works Section -->
-  <section id="how-it-works" class="py-20 bg-gray-50">
+  <section id="how-it-works" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">How It Works</h2>
       <picture>
         <source srcset="images/education.png" type="image/png">
-        <img src="images/education.png" alt="NovaCore Hub cycle: train, apply, deliver" class="mx-auto mb-10 w-full h-auto max-w-md rounded-2xl shadow-lg" loading="lazy" decoding="async">
+          <img src="images/education.png" alt="NovaCore Hub cycle: train, apply, deliver" class="mx-auto mb-10 w-full h-auto max-w-md rounded-2xl shadow-lg" loading="lazy" decoding="async" fetchpriority="low">
       </picture>
       <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
         <!-- Step 1 -->
@@ -411,7 +415,7 @@
     </div>
   </section>
   <!-- Why Students Love NovaCore Section -->
-  <section id="why-novacore" class="py-20 bg-white">
+  <section id="why-novacore" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-6xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
       <!-- Text/Benefits Column -->
       <div class="w-full lg:w-1/2">
@@ -467,13 +471,13 @@
       <div class="w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0">
         <picture>
           <source srcset="images/bridge.png" type="image/png">
-          <img src="images/bridge.png" alt="NovaCore bridge from potential to opportunity via skills, experience, mentorship" class="rounded-2xl shadow-lg w-full max-w-sm h-auto object-contain" loading="lazy" decoding="async">
+          <img src="images/bridge.png" alt="NovaCore bridge from potential to opportunity via skills, experience, mentorship" class="rounded-2xl shadow-lg w-full max-w-sm h-auto object-contain" loading="lazy" decoding="async" fetchpriority="low">
         </picture>
       </div>
     </div>
   </section>
   <!-- Meet Our Team Section -->
-  <section id="meet-our-team" class="py-20 bg-white">
+  <section id="meet-our-team" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 800px;">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Meet Our Team</h2>
@@ -525,7 +529,7 @@
     </div>
   </section>
   <!-- Business Services Section -->
-  <section id="business-services" class="py-20 bg-white">
+  <section id="business-services" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 1000px;">
     <div class="relative max-w-5xl mx-auto px-4">
       <img src="images/businessgrowth.png" alt="Business Services" class="mx-auto h-16 w-auto mb-6" loading="lazy" decoding="async">
       <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">Business Services by NovaCore</h2>
@@ -583,7 +587,7 @@
       <div class="mt-16 bg-gray-50 rounded-2xl p-6 md:p-10 shadow-md">
         <div class="grid gap-8 md:grid-cols-2 items-center">
           <div class="w-full aspect-video rounded-xl overflow-hidden shadow">
-            <img src="images/milanova 4.jpg" alt="Milanova Coffee Shop" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+            <img src="images/milanova 4.jpg" alt="Milanova Coffee Shop" class="w-full h-full object-cover" loading="lazy" decoding="async" fetchpriority="low" />
           </div>
           <div>
             <h3 class="text-2xl font-bold text-gray-900 mb-2">Milanova Coffee Shop</h3>
@@ -604,14 +608,14 @@
     </div>
   </section>
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 bg-gray-50">
+  <section id="testimonials" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">Meet Our Students</h2>
       <div id="testimonials-grid" class="grid gap-8 md:grid-cols-3"></div>
     </div>
   </section>
   <!-- Sponsor Us Section -->
-  <section id="sponsor-us" class="py-20 bg-white">
+  <section id="sponsor-us" class="py-20 bg-white" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Sponsor Us</h2>
       <p class="text-lg text-gray-700 mb-8">Join us in empowering the next generation of digital creators. Your sponsorship helps students access hands-on learning, mentorship, and real-world opportunities to grow and succeed.</p>
@@ -635,7 +639,7 @@
     </div>
   </section>
   <!-- Contact Us Section -->
-  <section id="contact" class="py-20 bg-gray-50">
+  <section id="contact" class="py-20 bg-gray-50" style="content-visibility: auto; contain-intrinsic-size: 900px;">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">Contact Us</h2>
       <div class="flex flex-col md:flex-row gap-10 items-center">
@@ -691,7 +695,7 @@
     </div>
   </section>
   <!-- Trusted By Section -->
-  <section class="py-8 bg-white">
+  <section class="py-8 bg-white" style="content-visibility: auto; contain-intrinsic-size: 300px;">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h3 class="text-lg md:text-xl font-semibold text-gray-700 mb-6">Trusted by schools, companies, NGOs, and non-profits</h3>
       <div class="flex flex-wrap justify-center items-center gap-8">
@@ -707,6 +711,14 @@
           <img src="images/Harambee-logo.png" alt="Harambee Rwanda" class="h-12 w-auto mb-2 object-contain" loading="lazy" decoding="async">
           <span class="text-gray-600 text-sm font-medium">Harambee Rwanda</span>
         </div>
+          <div class="flex flex-col items-center">
+            <img src="images/OFFICIAL ISMARTHOUSE LOGO.png" alt="Ismart House Rwanda" class="h-12 w-auto mb-2 object-contain" loading="lazy" decoding="async">
+            <span class="text-gray-600 text-sm font-medium">Ismart House Rwanda</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="images/binary tree.jpg" alt="BinaryTree" class="h-12 w-auto mb-2 object-contain" loading="lazy" decoding="async">
+            <span class="text-gray-600 text-sm font-medium">BinaryTree</span>
+          </div>
       </div>
     </div>
   </section>

@@ -180,7 +180,7 @@ if (scrollTopBtn) {
         const media = document.createElement('div');
         media.className = hasVideo ? 'aspect-video w-full mb-4' : 'w-full h-48 flex items-center justify-center rounded-lg mb-4 bg-gray-100 overflow-hidden';
         if (hasVideo) {
-          media.innerHTML = '<video controls preload="metadata" class="w-full h-full rounded-lg"><source src="' + item.video + '" type="video/mp4">Your browser does not support the video tag.</video>';
+          media.innerHTML = '<video controls preload="none" class="w-full h-full rounded-lg"><source src="' + item.video + '" type="video/mp4">Your browser does not support the video tag.</video>';
         } else if (hasPhoto) {
           media.innerHTML = '<img src="' + item.photo + '" alt="' + (item.name || 'Testimonial') + '" class="w-full h-full object-cover rounded-lg">';
         } else {

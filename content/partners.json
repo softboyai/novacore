@@ -3,17 +3,27 @@
     {
       "name": "Mount Kigali University",
       "logo": "images/mku.jpg",
-      "link": "#"
+      "link": "https://mkur.ac.rw/"
     },
     {
       "name": "UTB",
       "logo": "images/utb.png",
-      "link": "#"
+      "link": "https://mis.utb.ac.rw/"
     },
     {
       "name": "Harambee Rwanda",
       "logo": "images/Harambee-logo.png",
-      "link": "#"
+      "link": "https://harambee.rw/"
+    },
+    {
+      "name": "Ismart House Rwanda",
+      "logo": "images/OFFICIAL ISMARTHOUSE LOGO.png",
+      "link": "https://www.ismarthouserwanda.com/"
+    },
+    {
+      "name": "BinaryTree",
+      "logo": "images/binary tree.jpg",
+      "link": "https://binarytree.us/"
     }
   ]
 }
