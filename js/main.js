@@ -306,3 +306,43 @@ if (scrollTopBtn) {
     }
   }
 })();
+
+// Lightweight Lightbox for iSmart gallery
+(function setupLightbox() {
+  const images = document.querySelectorAll('img[data-lightbox="ismart-gallery"]');
+  if (!images.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.inset = '0';
+  overlay.style.background = 'rgba(0,0,0,0.85)';
+  overlay.style.display = 'none';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.zIndex = '99999';
+
+  const img = document.createElement('img');
+  img.style.maxWidth = '95vw';
+  img.style.maxHeight = '90vh';
+  img.style.borderRadius = '12px';
+  img.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
+  overlay.appendChild(img);
+
+  function close() {
+    overlay.style.display = 'none';
+    img.src = '';
+  }
+
+  overlay.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(overlay);
+    images.forEach(el => {
+      el.addEventListener('click', () => {
+        img.src = el.getAttribute('src');
+        overlay.style.display = 'flex';
+      });
+    });
+  });
+})();

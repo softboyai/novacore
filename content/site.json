@@ -4,5 +4,10 @@
     "subtitle": "At NovaCore Hub, young people learn real digital skills and businesses get real results. Simple as that.",
     "ctaText": "Get Started",
     "ctaHref": "#register"
+  },
+  "location": {
+    "address": "Kigali, Kimironko KG 21st",
+    "note": "same as iSmart House Rwanda",
+    "mapEmbedSrc": "https://www.google.com/maps?q=Kimironko+KG+21st,+Kigali,+Rwanda&output=embed"
   }
 }
