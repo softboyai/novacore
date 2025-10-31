@@ -182,6 +182,10 @@ html.dark #home {
 @media (max-width: 768px) {
   .hero-bg { object-position: center 20%; }
 }
+@media (max-width: 640px) {
+  /* Improve LCP/FCP on mobile by hiding heavy hero background image */
+  .hero-bg { display: none; }
+}
 
 #home::before {
   content: '';
@@ -930,6 +934,12 @@ img, iframe, video {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   will-change: auto;
+}
+
+/* Reduce visual work on small screens to improve Speed Index */
+@media (max-width: 640px) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal-visible { opacity: 1; transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
