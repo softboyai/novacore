@@ -53,16 +53,13 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio" defer></script>
   <script>
-    // Enable class-based dark mode for Tailwind so the 'dark' class works
-    window.addEventListener('DOMContentLoaded', function() {
-      window.tailwind = window.tailwind || {};
-      window.tailwind.config = { darkMode: 'class' };
-    });
+    // Tailwind config must be defined before the CDN script so classes render immediately
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = { darkMode: 'class' };
   </script>
-  <link href="/css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="/css/style.css" rel="stylesheet"></noscript>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <link href="/css/style.css" rel="stylesheet">
   <!-- Netlify Identity widget for CMS login (low priority) -->
   <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js" importance="low"></script>
   
