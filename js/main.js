@@ -160,16 +160,21 @@ if (scrollTopBtn) {
   }
 })();
 
-// Dynamic content rendering for testimonials, partners, sponsors
+// Dynamic content rendering for testimonials, partners, sponsors (lazy loaded)
 (function dynamicLists() {
   function safeJson(url) {
     return fetch(url, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null);
   }
+  
+  // Use requestIdleCallback if available, otherwise setTimeout
+  const scheduleLoad = window.requestIdleCallback || ((fn) => setTimeout(fn, 200));
 
-  // Testimonials
+  // Testimonials (lazy load when section is visible)
   const testimonialsGrid = document.getElementById('testimonials-grid');
   if (testimonialsGrid) {
-    safeJson('/content/testimonials.json').then(data => {
+    const loadTestimonials = () => {
+      scheduleLoad(() => {
+        safeJson('/content/testimonials.json').then(data => {
       if (!data || !Array.isArray(data.items)) return;
       testimonialsGrid.innerHTML = '';
       data.items.forEach(item => {
@@ -196,12 +201,24 @@ if (scrollTopBtn) {
         testimonialsGrid.appendChild(card);
       });
     });
+      });
+    };
+    
+    // Load when testimonials section is near viewport
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        loadTestimonials();
+        observer.disconnect();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(testimonialsGrid);
   }
 
-  // Partners
+  // Partners (lazy load)
   const partnersRow = document.getElementById('partners-logos');
   if (partnersRow) {
-    safeJson('/content/partners.json').then(data => {
+    scheduleLoad(() => {
+      safeJson('/content/partners.json').then(data => {
       if (!data || !Array.isArray(data.items)) return;
       partnersRow.innerHTML = '';
       data.items.forEach(p => {
@@ -231,6 +248,7 @@ if (scrollTopBtn) {
         }
         partnersRow.appendChild(wrap);
       });
+    });
     });
   }
 

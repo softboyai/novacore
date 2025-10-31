@@ -1,5 +1,10 @@
-@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Tailwind is loaded via CDN script, fonts loaded with display=swap */
+
+/* Performance: Enable font-display swap via CSS (if fonts are self-hosted) */
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+}
 
 /* Root Variables - NovaCore Branding */
 :root {
@@ -505,7 +510,8 @@ html.dark .bg-gradient-to-r.from-blue-100.via-white.to-green-100 div { color: #e
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translate3d(0, -8px, 0) scale(1.02);
+  will-change: transform;
   box-shadow: var(--shadow-2xl);
   border-color: var(--cyan-blue);
 }
@@ -543,12 +549,14 @@ button:focus, .btn:focus {
 }
 
 button:hover, .btn:hover {
-  transform: translateY(-2px);
+  transform: translate3d(0, -2px, 0);
+  will-change: transform;
   box-shadow: var(--shadow-lg);
 }
 
 button:active, .btn:active {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 
 /* Primary Button - Navy background with White text */
@@ -606,7 +614,7 @@ input:focus, textarea:focus, select:focus {
   border-color: var(--cyan-blue);
   box-shadow: 0 0 0 4px rgba(0, 180, 241, 0.1);
   background: var(--white);
-  transform: translateY(-1px);
+  transform: translate3d(0, -1px, 0);
 }
 
 input::placeholder, textarea::placeholder {
@@ -749,7 +757,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 #scrollTopBtn:hover {
-  transform: translateY(-4px) scale(1.1);
+  transform: translate3d(0, -4px, 0) scale(1.1);
+  will-change: transform;
   box-shadow: var(--shadow-2xl);
 }
 
@@ -797,19 +806,21 @@ html.dark .footer-cta {
 html.dark .footer-cta h3 { color: var(--white); }
 html.dark .footer-cta p { color: var(--white); }
 
-/* CTA subtle animation */
+/* CTA subtle animation (GPU accelerated) */
 .cta-animate {
   transform: translateZ(0);
+  will-change: transform;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .cta-animate:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translate3d(0, -2px, 0) scale(1.02);
   box-shadow: var(--shadow-xl);
 }
 
 .cta-animate:active {
-  transform: translateY(0) scale(1.0);
+  transform: translate3d(0, 0, 0) scale(1.0);
+  will-change: auto;
 }
 
 /* Responsive Images */
@@ -907,16 +918,18 @@ img, iframe, video {
   }
 }
 
-/* Reveal-on-scroll animations */
+/* Reveal-on-scroll animations (GPU accelerated) */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translate3d(0, 16px, 0);
+  will-change: opacity, transform;
   transition: opacity 600ms ease, transform 600ms ease;
 }
 
 .reveal-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
