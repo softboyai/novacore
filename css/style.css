@@ -182,10 +182,6 @@ html.dark #home {
 @media (max-width: 768px) {
   .hero-bg { object-position: center 20%; }
 }
-@media (max-width: 640px) {
-  /* Improve LCP/FCP on mobile by hiding heavy hero background image */
-  .hero-bg { display: none; }
-}
 
 #home::before {
   content: '';

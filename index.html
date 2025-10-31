@@ -58,10 +58,9 @@
     window.tailwind = window.tailwind || {};
     window.tailwind.config = { darkMode: 'class' };
   </script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/css/style.css" rel="stylesheet">
-  <!-- Netlify Identity widget for CMS login (low priority) -->
-  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js" importance="low"></script>
+  <!-- Netlify Identity widget removed on public site to speed up initial load -->
   
   <!-- LocalBusiness Schema -->
   <script type="application/ld+json">{
@@ -162,7 +161,7 @@
   </header>
   <!-- Hero Section -->
   <section id="home" class="relative min-h-screen flex items-center justify-center text-center" style="background: #0A2A66;">
-    <img src="images/ismart5.jpg" alt="Background" class="hero-bg absolute inset-0 w-full h-full object-cover object-center opacity-60 -z-10" loading="eager" decoding="async" fetchpriority="high" sizes="100vw" width="1920" height="1080">
+    <img src="images/ismart5.jpg" alt="Background" class="hero-bg absolute inset-0 w-full h-full object-cover object-center opacity-60 -z-10" loading="eager" fetchpriority="high" sizes="100vw" width="1920" height="1080">
     <div class="absolute inset-0" style="background: rgba(0, 180, 241, 0.1); -z-index: 10;"></div>
     <div class="z-10 px-4">
       <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">Learn. Build. Grow.</h1>
