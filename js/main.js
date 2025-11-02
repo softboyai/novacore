@@ -252,6 +252,36 @@ if (scrollTopBtn) {
     });
   }
 
+  // Business Testimonials
+  const businessTestimonialsGrid = document.getElementById('business-testimonials-grid');
+  if (businessTestimonialsGrid) {
+    scheduleLoad(() => {
+      safeJson('/content/business-testimonials.json').then(data => {
+        if (!data || !Array.isArray(data.items)) return;
+        businessTestimonialsGrid.innerHTML = '';
+        data.items.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'bg-white rounded-xl shadow-md p-6 flex flex-col';
+          const hasPhoto = !!item.photo;
+          if (hasPhoto) {
+            const media = document.createElement('div');
+            media.className = 'w-full h-48 flex items-center justify-center rounded-lg mb-4 bg-gray-100 overflow-hidden';
+            media.innerHTML = '<img src="' + item.photo + '" alt="' + (item.name || 'Business Testimonial') + '" class="w-full h-full object-cover rounded-lg" loading="lazy" decoding="async">';
+            card.appendChild(media);
+          }
+          const info = document.createElement('div');
+          info.className = 'flex-1';
+          info.innerHTML = '<div class="font-bold text-gray-900 mb-1">' + (item.name || '') + '</div>' +
+            (item.role ? '<div class="text-blue-600 text-sm mb-3">' + item.role + '</div>' : '') +
+            (item.quote ? '<p class="text-gray-700 mb-4 text-sm leading-relaxed">"' + item.quote + '"</p>' : '') +
+            (item.result ? '<div class="mt-auto pt-4 border-t border-gray-200"><div class="flex items-center gap-2 text-green-600 font-semibold text-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg><span>' + item.result + '</span></div></div>' : '');
+          card.appendChild(info);
+          businessTestimonialsGrid.appendChild(card);
+        });
+      });
+    });
+  }
+
   // Sponsors: disabled per request; keep placeholder logic removed
 })();
 

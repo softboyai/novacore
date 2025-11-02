@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "name": "Marie Umutoni",
+      "role": "Founder, Catering Services",
+      "quote": "Before NovaCore, customers couldn't find us on Google. Now we're the first result for 'catering services Kigali' and we get 15-20 inquiries per week just from our website.",
+      "result": "4X increase in leads in 60 days",
+      "photo": "images/milanova 4.jpg"
+    },
+    {
+      "name": "Patrick Niyomwungeri",
+      "role": "Business Owner",
+      "quote": "We tried managing social media ourselves for 6 months — exhausting and no results. NovaCore took over and within 2 months, we had our best sales month ever. They know what works.",
+      "result": "180% increase in online sales",
+      "photo": "images/milanova 4.jpg"
+    },
+    {
+      "name": "Grace Uwase",
+      "role": "CEO",
+      "quote": "NovaCore didn't just build us a website. They built us a customer-getting system. Our website now does more selling than our entire sales team combined.",
+      "result": "Website generates 60% of total revenue",
+      "photo": "images/milanova 4.jpg"
+    }
+  ]
+}
