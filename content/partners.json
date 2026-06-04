@@ -1,21 +1,6 @@
 {
   "items": [
     {
-      "name": "Mount Kigali University",
-      "logo": "images/mku.jpg",
-      "link": "https://mkur.ac.rw/"
-    },
-    {
-      "name": "UTB",
-      "logo": "images/utb.png",
-      "link": "https://mis.utb.ac.rw/"
-    },
-    {
-      "name": "Harambee Rwanda",
-      "logo": "images/Harambee-logo.png",
-      "link": "https://harambee.rw/"
-    },
-    {
       "name": "Ismart House Rwanda",
       "logo": "images/OFFICIAL ISMARTHOUSE LOGO.png",
       "link": "https://www.ismarthouserwanda.com/"
